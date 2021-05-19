@@ -11,8 +11,11 @@ app.use(
     extended: true,
   })
 )
+app.get('/', (request, response) => {
+  response.json({ info: 'Node.js, Express, and Postgres API' })
+})
 
-app.post('/fi', db.insertfi)
+app.post('/', db.insertfi)
 
 
 app.listen(7000, () => {
