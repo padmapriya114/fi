@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const db = require('./queries')
-const port = 7000
+const port = 2000
 
 app.use(bodyParser.json())
 
@@ -18,6 +18,6 @@ app.get('/', (request, response) => {
 app.post('/cbanc/fi', db.insertfi)
 
 
-app.listen(7000, () => {
+app.listen(2000, () => {
   console.log(`Server is running.`);
 });
