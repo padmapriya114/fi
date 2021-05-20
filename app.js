@@ -15,7 +15,7 @@ app.get('/', (request, response) => {
   response.json({ info: 'Node.js, Express, and Postgres API' })
 })
 
-app.post('/', db.insertfi)
+app.post('/fi', db.insertfi)
 
 
 app.listen(7000, () => {
