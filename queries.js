@@ -11,7 +11,7 @@ const pool = new Pool({
 
 const insertfi = (request, response) => {
 const {id, accountid, accountnumber, wireroutingnumber, achroutingnumber, dwollafundingid, name, routingnumber, authtextid} = request.body
-  pool.query( 'INSERT INTO fi (id, accountid, accountnumber, wireroutingnumber, achroutingnumber, dwollafundingid, name, routingnumber, authtextid) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)',[id, accountid, accountnumber, wireroutingnumber, achroutingnumber, dwollafundingid, name, routingnumber, authtextid], (error, results) => {
+  pool.query( 'INSERT INTO cbanc.fi (id, accountid, accountnumber, wireroutingnumber, achroutingnumber, dwollafundingid, name, routingnumber, authtextid) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)',[id, accountid, accountnumber, wireroutingnumber, achroutingnumber, dwollafundingid, name, routingnumber, authtextid], (error, results) => {
     if (error) {
       throw error
     }
